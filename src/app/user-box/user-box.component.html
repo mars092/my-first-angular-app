@@ -1,0 +1,29 @@
+<button class="user-box" (click)="openDialog(user.id)" [ngClass]="{'user-box_grid': btnActive === 'Grid', 'user-box_list': btnActive === 'List'}">
+  <div class="user-box__img">
+    <img src="{{user.avatar}}" alt="">
+  </div>
+
+  <div class="user-box__content" [ngSwitch]="btnActive">
+
+    <ng-container *ngSwitchCase="'List'">
+      <div class="user-box__name">
+        <span>Last name:</span> {{user.last_name}} <br>
+        <span>First name:</span> {{user.first_name}}
+      </div>
+      <div class="user-box__email">
+        <span>Email:</span> {{user.email}}
+      </div>
+    </ng-container>
+
+    <ng-container *ngSwitchDefault>
+      <div class="user-box__name">
+        {{user.last_name + " " + user.first_name}}
+      </div>
+      <div class="user-box__email">
+        {{user.email}}
+      </div>
+    </ng-container>
+
+  </div>
+
+</button>

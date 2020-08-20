@@ -1,0 +1,86 @@
+.user-dialog {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+.user-dialog__title {
+  display: flex;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.user-dialog__title h2 {
+  margin: 0;
+  padding-right: 8px;
+}
+
+.user-dialog__close {
+  flex-shrink: 0;
+  align-self: flex-start;
+  margin-left: auto;
+}
+
+.user-dialog__close svg {
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+
+.user-dialog__close svg path {
+  fill: #202020;
+  transition: fill 0.25s ease;
+}
+
+.user-dialog__close:hover svg path {
+  fill: #cfa600;
+}
+
+.user-dialog__img img {
+  display: block;
+  max-width: 128px;
+}
+
+.user-dialog__content {
+  padding-left: 16px;
+}
+
+.user-dialog__name {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.user-dialog__name span,
+.user-dialog__email span {
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.user-dialog__email {
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .user-dialog {
+    flex-direction: column;
+    width: 200px;
+  }
+  .user-dialog__content {
+    padding-left: 0;
+    padding-top: 8px;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .user-dialog__name,
+  .user-dialog__email {
+    font-size: 14px;
+  }
+  .user-dialog__name span,
+  .user-dialog__email span {
+    font-size: 12px;
+  }
+}

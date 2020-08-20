@@ -1,0 +1,29 @@
+<mat-dialog-content>
+  <div class="user-dialog" *ngIf="singleUser">
+    <div class="user-dialog__title">
+      <h2>Card user</h2>
+      <button mat-dialog-close class="user-dialog__close">
+        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M15.8536 5.14645C16.0488 5.34171 16.0488 5.65829 15.8536 5.85355L5.85355 15.8536C5.65829 16.0488 5.34171 16.0488 5.14645 15.8536C4.95118 15.6583 4.95118 15.3417 5.14645 15.1464L15.1464 5.14645C15.3417 4.95118 15.6583 4.95118 15.8536 5.14645Z" fill="black" />
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M5.14645 5.14645C5.34171 4.95118 5.65829 4.95118 5.85355 5.14645L15.8536 15.1464C16.0488 15.3417 16.0488 15.6583 15.8536 15.8536C15.6583 16.0488 15.3417 16.0488 15.1464 15.8536L5.14645 5.85355C4.95118 5.65829 4.95118 5.34171 5.14645 5.14645Z" fill="black" />
+        </svg>
+      </button>
+    </div>
+    <div class="user-dialog__img">
+      <img src="{{singleUser.avatar}}" alt="">
+    </div>
+    <div class="user-dialog__content">
+      <div class="user-dialog__name">
+        <span>Last name:</span> {{singleUser.last_name}} <br>
+        <span>First name:</span> {{singleUser.first_name}}
+      </div>
+      <div class="user-dialog__email">
+        <span>Email:</span> <br>
+        {{singleUser.email}}
+      </div>
+    </div>
+  </div>
+</mat-dialog-content>
+<!-- <mat-dialog-actions>
+  <button mat-dialog-close>Cancel</button>
+</mat-dialog-actions> -->
