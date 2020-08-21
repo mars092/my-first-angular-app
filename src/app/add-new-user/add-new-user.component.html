@@ -1,0 +1,18 @@
+<div class="add-new-user">
+  <h2>Add new user</h2>
+  <form class="add-new-user__form" [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+    <label class="input-area">
+      <span>Last name</span>
+      <input type="text" required formControlName="firstName">
+    </label>
+    <label class="input-area">
+      <span>First name</span>
+      <input type="text" required formControlName="lastName">
+    </label>
+    <label class="input-area">
+      <span>Email</span>
+      <input type="text" required formControlName="email">
+    </label>
+    <button type="submit" class="btn btn_default">Save</button>
+  </form>
+</div>

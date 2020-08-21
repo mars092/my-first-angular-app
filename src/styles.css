@@ -6,6 +6,11 @@
 /* library */
 @import "~normalize.css";
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   line-height: 1.2;
@@ -21,5 +26,51 @@ button {
   background-color: inherit;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* input */
+.input-area {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.input-area span {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.input-area input {
+  flex-grow: 1;
+  width: auto;
+  height: 44px;
+  outline: none;
+  padding: 0 16px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* btn */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  text-align: center;
+  padding: 0;
+}
+
+.btn_default {
+  height: 42px;
+  font-size: 20px;
+  color: #fff;
+  padding: 5px 24px;
+  border-radius: 4px;
+  background-color: #cfa600;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.btn_default:hover {
+  box-shadow: -2px 2px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn_default:active {
+  box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.1);
+  transform: translate(-2px, 2px);
+}

@@ -1,0 +1,3 @@
+.add-new-user__form .input-area:not(:last-child) {
+  margin-bottom: 10px;
+}
